@@ -1,0 +1,33 @@
+# only track specific .config files
+.config/**
+!.config/alacritty**
+!.config/kitty**
+!.config/fontconfig**
+!.config/systemd/user/ssh-agent.service
+!.config/flameshot**
+
+# only track specific .ssh files
+.ssh/**
+!.ssh/authorized_keys
+
+# ignore font uuid file
+.fonts/.uuid
+
+# only track specific .icons files
+.icons/**
+!.icons/default**
+
+# ignore completion files
+.bash_config.d/completion.d/*
+
+# only track specific .local files
+.local/**
+!.local/share/fonts
+
+# ignore local config.sh file
+.bash_config.d/config.sh
+
+.bash_config.d/specific.d/*
+
+# ignore venvs content
+.venvs/*/*
