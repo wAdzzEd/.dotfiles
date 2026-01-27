@@ -15,7 +15,6 @@ Prérequis :
 
 Pour installer les prérequis, tapper les commandes :
 
-'''bash
 	sudo apt update && sudo apt upgrade -y
 	sudo apt-get install -y git stow curl flameshot nala fontconfig kitty
 
