@@ -1,0 +1,10 @@
+autoload -Uz compinit
+compinit
+
+setopt AUTO_CD
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
+setopt INTERACTIVE_COMMENTS
+
+HISTSIZE=100000
+SAVEHIST=100000

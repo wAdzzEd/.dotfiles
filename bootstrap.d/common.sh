@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+info() {
+    printf "\033[1;34m==>\033[0m %s\n" "$1"
+}
+
+success() {
+    printf "\033[1;32m✓\033[0m %s\n" "$1"
+}
+
+warning() {
+    printf "\033[1;33m!\033[0m %s\n" "$1"
+}
+
+error() {
+    printf "\033[1;31m✗\033[0m %s\n" "$1"
+}

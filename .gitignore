@@ -1,33 +1,20 @@
-# only track specific .config files
-.config/**
-!.config/alacritty**
-!.config/kitty**
-!.config/fontconfig**
-!.config/systemd/user/ssh-agent.service
-!.config/flameshot**
+# macOS
+.DS_Store
 
-# only track specific .ssh files
-.ssh/**
-!.ssh/authorized_keys
+# Editors
+.idea/
+.vscode/settings.json
 
-# ignore font uuid file
-.fonts/.uuid
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
 
-# only track specific .icons files
-.icons/**
-!.icons/default**
+# Logs
+*.log
 
-# ignore completion files
-.bash_config.d/completion.d/*
-
-# only track specific .local files
-.local/**
-!.local/share/fonts
-
-# ignore local config.sh file
-.bash_config.d/config.sh
-
-.bash_config.d/specific.d/*
-
-# ignore venvs content
-.venvs/*/*
+# Python
+__pycache__/
+*.pyc

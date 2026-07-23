@@ -1,0 +1,20 @@
+[user]
+	name = Lanson Robin
+	mail = aliasforgithub.overstep386@passmail.net
+[init]
+	defaultBranch = main
+[core]
+	editor = micro
+	pager = less
+[color]
+	ui = auto
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
+[alias]
+	st = status
+	br = branch
+	co = checkout
+	cm = commit
+	lg = log --graphe --oneline --decorate --all
