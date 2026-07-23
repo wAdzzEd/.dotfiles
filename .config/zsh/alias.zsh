@@ -13,7 +13,7 @@ alias ...="cd ../.."
 
 alias mkdir="mkdir -pv"
 
-alias update="sudo pacman -Syu && yay -Sua && flatpack update"
+alias update="sudo pacman -Syu && yay -Sua && flatpak update"
 
 alias df="df -h"
 alias free="free -h"
