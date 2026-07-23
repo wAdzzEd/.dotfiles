@@ -1,68 +1,103 @@
-		----------------
-		| INSTALLATION |
-		----------------
+# 🏠 Robin's Dotfiles
 
-I - Installation des prérequis.
+<div align="center">
 
-Prérequis :
-- git
-- stow
-- curl
-- flameshot
-- nala
-- fontconfig
-- kitty
+![Arch Linux Badge](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=archlinux\&logoColor=fff\&style=for-the-badge)
+![Zsh Badge](https://img.shields.io/badge/Zsh-F15A24?logo=gnu-bash\&logoColor=fff\&style=for-the-badge)
+![GNU Stow Badge](https://img.shields.io/badge/GNU%20Stow-444444?style=for-the-badge)
 
-Pour installer les prérequis, tapper les commandes :
+</div>
 
-	sudo apt update && sudo apt upgrade -y
-	sudo apt-get install -y git stow curl flameshot nala fontconfig kitty
+<div align="center">
 
-Pour installer starship, tapper la commande :
+![Kitty Badge](https://img.shields.io/badge/Kitty-000000?logo=kitty\&logoColor=fff\&style=for-the-badge)  
+![Starship Badge](https://img.shields.io/badge/Starship-DD0B78?logo=starship\&logoColor=fff\&style=for-the-badge)  
+![Fastfetch Badge](https://img.shields.io/badge/Fastfetch-7B68EE?style=for-the-badge)  
+![Micro Badge](https://img.shields.io/badge/Micro-2E8B57?style=for-the-badge)  
+![Git Badge](https://img.shields.io/badge/Git-F05032?logo=git\&logoColor=fff\&style=for-the-badge)
 
-	curl -sS https://starship.rs/install.sh | sh
+</div>
 
-II - Déploiments de l'environnements :
+My personal Arch Linux dotfiles, managed with **GNU Stow** and installed through a simple bootstrap script.
 
-Clonage du repo :
+The goal of this repository is to keep my development environment **minimal, reproducible and easy to maintain**.
 
-	cd ~
-	git clone git@github.com:wAdzzEd/.dotfiles.git ~/.dotfiles
+---
 
-Déploiments des dotfiles :
+## 🚀 Installation
 
-	cd .dotfiles
-	stow .
+Install Git:
 
-Rafraîchissement du cache :
+```bash
+sudo pacman -S git
+```
 
-	fc-cache -fv
+Clone the repository:
 
-Recharger le terminal :
+```bash
+git clone git@github.com:wAdzzEd/.dotfiles.git ~/.dotfiles
+```
 
-	source ~/.bashrc
+Run the bootstrap:
 
-Installation terminé !
+```bash
+cd ~/.dotfiles
+bash bootstrap.d/bootstrap.sh
+```
 
+The bootstrap script will:
 
-			-----------
-			| UPDATES |
-			-----------
-I - Update du repo.
+* install required packages
+* install AUR packages
+* configure Git
+* create symbolic links using GNU Stow
+* configure the default shell
 
-Après avoir modifier les fichiers dotfiles :
+Once finished, reboot your computer.
 
-	cd ~/.dotfiles
-	stow .
-	git add .
-	git commit -m "chemin/vers/fichier/modifier : changement apporté au fichier"
-	git push
+---
 
-II - Update de l'environnement.
+## 📂 Repository Structure
 
-Commandes à tapper pour mettre à jour l'environnement :
+```
+.
+├── .config/
+│   ├── fastfetch/
+│   ├── kitty/
+│   └── zsh/
+│
+├── bootstrap.d/
+│   ├── packages/
+│   └── *.sh
+│
+├── .gitconfig
+├── .zshrc
+└── README.md
+```
 
-	cd ~/.dotfiles
-	git pull
-	stow .
-	source ~./bashrc
+The repository mirrors the structure of `$HOME`, allowing GNU Stow to manage every configuration file automatically.
+
+---
+
+## 🖥️ Environment
+
+* **OS:** Arch Linux
+* **Shell:** Zsh
+* **Terminal:** Kitty
+* **Prompt:** Starship
+* **Editor:** Micro *(work in progress)*
+* **File Manager:** Yazi
+* **Git UI:** Lazygit
+* **System Monitor:** Btop
+
+---
+
+## 📸 Screenshots
+
+> Coming soon.
+
+---
+
+## 📜 License
+
+This project is released under the MIT License.
