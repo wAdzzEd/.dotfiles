@@ -6,7 +6,7 @@ python-pip
 python-yaml
 python-pipx
 kitty
-micro
+neovim
 unzip
 yazi
 fzf
@@ -35,3 +35,5 @@ rustup
 openssh
 networkmanager
 jdk-openjdk
+wl-clipboard
+tree-sitter-cli

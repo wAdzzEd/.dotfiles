@@ -25,3 +25,7 @@ alias ping="ping -c 5"
 alias ip="ip -c"
 
 alias wget="wget -c"
+
+alias pm="sudo pacman"
+
+alias nv="nvim"

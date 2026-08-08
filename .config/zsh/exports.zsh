@@ -1,5 +1,5 @@
-export EDITOR="micro"
-export VISUAL="micro"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 export BROWSER="zen"
 
