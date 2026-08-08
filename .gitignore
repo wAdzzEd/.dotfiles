@@ -18,3 +18,8 @@
 # Python
 __pycache__/
 *.pyc
+
+#ssh key ignored / ssh config keeped
+.ssh/id_*
+.ssh/*.pem
+!.ssh/config

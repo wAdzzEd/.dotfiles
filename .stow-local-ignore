@@ -24,3 +24,6 @@ _darcs
 
 bootstrap.d
 \.bash_config.d/config.sh
+
+^/\.ssh/id_.*
+^/\.ssh/.*\.pem$
