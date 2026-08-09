@@ -52,6 +52,8 @@ The bootstrap script will:
 * configure Git
 * create symbolic links using GNU Stow
 * configure the default shell
+* set up the SSH authentification agent
+* prepare the development environment
 
 Once finished, reboot your computer.
 
@@ -64,6 +66,9 @@ Once finished, reboot your computer.
 ├── .config/
 │   ├── fastfetch/
 │   ├── kitty/
+│   ├── nvim/ 
+│   ├── systemd/ 
+│   │   └── user/
 │   └── zsh/
 │
 ├── bootstrap.d/
@@ -85,7 +90,7 @@ The repository mirrors the structure of `$HOME`, allowing GNU Stow to manage eve
 * **Shell:** Zsh
 * **Terminal:** Kitty
 * **Prompt:** Starship
-* **Editor:** Micro *(work in progress)*
+* **Editor:** Neovim + Lazyvim
 * **File Manager:** Yazi
 * **Git UI:** Lazygit
 * **System Monitor:** Btop

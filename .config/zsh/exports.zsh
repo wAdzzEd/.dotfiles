@@ -8,3 +8,6 @@ export PAGER="less"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+export PATH="$HOME/.local/bin:$PATH"
+
