@@ -29,3 +29,6 @@ alias wget="wget -c"
 alias pm="sudo pacman"
 
 alias nv="nvim"
+
+alias connect="nmcli connection up wg0"
+alias disconnect="nmcli connection down wg0"

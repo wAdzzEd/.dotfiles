@@ -1,0 +1,32 @@
+@define-color bg       #282a36;
+@define-color bg-alt   #44475a;
+@define-color fg       #f8f8f2;
+@define-color purple   #bd93f9;
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: @bg;
+    color: @fg;
+}
+
+#wireplumber,
+#network,
+#battery,
+#clock {
+    margin: 0 8;
+}
+
+#workspaces button {
+    padding: 0 3;
+    color: @fg;
+}
+
+#workspaces button.active {
+    color: @purple;
+    font-weight: 700;
+}

@@ -1,0 +1,93 @@
+configuration {
+        display-drun: "Applications";
+        display-window: "Windows";
+        drun-display-format: "{name}";
+        font: "JetBrainsMono Nerd Font 12";
+        modi: "window,run,drun,emoji";
+        show-icons: true;
+        icon-theme: "Darcula";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #282a3666;
+  bg-alt: #44475a66;
+  fg: #f8f8f2;
+  fg-alt: #7f849c;
+  purple: #bd93f9;
+  cyan: #8be9fd;
+  green: #50fa7b;
+  orange: #ffb86c;
+  pink: #ff79c6;
+  red: #ff5555;
+  yellow: #f1fa8c;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+        width: 30%;
+        background-color: @bg;
+        border-radius: 12;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}
+
+entry {
+        padding: 12;
+        background-color: @bg-alt;
+        text-color: @fg;
+}
+
+inputbar {
+        children: [prompt, entry];
+        background-color: @bg;
+    }
+
+element {
+        padding: 8 0;
+        background-color: transparent;
+        text-color: @fg-alt;
+}
+
+element selected {
+        text-color: @fg;
+        border-radius: 8;
+}
+
+element-text {
+        background-color: transparent;
+        text-color: inherit;
+        vertical-align: 0.5;
+}
+
+element-text-match {
+        text-color: @purple;
+}
+
+element-icon {
+        size: 14;
+        padding: 0 10 0 0;
+        background-color: transparent;
+}
+
+listview {
+        padding: 8 12;
+        columns: 1;
+        lines: 10;
+        background-color: @bg;
+}
+
+prompt {
+  enabled: true;
+  padding: 12 0 0 12;
+  background-color: @bg-alt;
+  text-color: @fg;
+}

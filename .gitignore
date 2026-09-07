@@ -19,7 +19,10 @@
 __pycache__/
 *.pyc
 
-#ssh key ignored / ssh config keeped
+# ssh key ignored / ssh config keeped
 .ssh/id_*
 .ssh/*.pem
 !.ssh/config
+
+# systemd
+.config/systemd/user/*.target.wants/
