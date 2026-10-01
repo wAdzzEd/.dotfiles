@@ -30,5 +30,7 @@ alias pm="sudo pacman"
 
 alias nv="nvim"
 
+[[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"
 alias connect="nmcli connection up wg0"
 alias disconnect="nmcli connection down wg0"
+alias connect-uga='sudo openconnect --authgroup="Etudiants U. Grenoble Alpes" https://vpn.grenet.fr'

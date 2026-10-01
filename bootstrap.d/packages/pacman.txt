@@ -37,3 +37,6 @@ networkmanager
 jdk-openjdk
 wl-clipboard
 tree-sitter-cli
+discord
+signal-desktop
+jolt
