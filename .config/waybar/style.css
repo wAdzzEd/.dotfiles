@@ -1,28 +1,45 @@
+/* --- Color definition (dracula theme) --- */
 @define-color bg       #282a36;
 @define-color bg-alt   #44475a;
+@define-color cl       #6272A4;
 @define-color fg       #f8f8f2;
-@define-color purple   #bd93f9;
 
+@define-color purple   #bd93f9;
+@define-color pink     #ff79c6;
+@define-color cyan     #8be9fd;
+@define-color green    #50fa7b;
+@define-color yellow   #f1fa8c;
+@define-color orange   #ffb86c;
+@define-color red      #ff5555;
+@define-color white    #ffffff;
+
+/* --- Styling part --- */
 * {
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 
+/* --- Floating waybar config --- */
 window#waybar {
-    background: @bg;
+    background: transparent;
     color: @fg;
 }
 
-#wireplumber,
-#network,
-#battery,
-#clock {
-    margin: 0 8;
+window#waybar > box {
+    background: @bg;
+    border-radius: 10px;
+    margin: 10px 15px 0px 15px;
+}
+
+/* --- Gobal marging --- */
+
+#wireplumber, #network, #battery, #bluetooth, #clock {
+    margin: 0 10px;
 }
 
 #workspaces button {
-    padding: 0 3;
+    padding: 0 3px;
     color: @fg;
 }
 
@@ -30,3 +47,45 @@ window#waybar {
     color: @purple;
     font-weight: 700;
 }
+
+/* --- Global styling --- */
+#wireplumber, #network, #battery, #bluetooth {
+    background: transparent;
+    background-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+/* --- Special Stat --- */
+#battery.charging, #battery.plugged {
+    color: @cyan;
+}
+
+/* --- Normal Stat --- */
+#network.wifi, #network.ethernet, #battery {
+    color: @green;
+}
+
+#wireplumber {
+    color: @orange; 
+}
+
+#bluetooth {
+    color: @cyan;
+}
+
+/* --- Warning Stat --- */
+#network.warning, #battery.warning:not(.charging) {
+    color: @orange;
+}
+
+/* --- Critical Stat --- */
+#network.critical, #battery.critical:not(.charging) {
+    color: @red;
+}
+
+/* --- Inactive Stat --- */
+#network.disconnected, #network.disable, #wireplumber.muted, #bluetooth.disabled {
+    color: @fg;
+}
+

@@ -1,44 +1,61 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 40,
     "modules-left": [
         "hyprland/workspaces"
     ],
-    "modules-center": [
-        "hyprland/window"
-    ],
     "modules-right": [
         "wireplumber",
+        "bluetooth",
         "network",
         "battery",
         "clock"
     ],
+    "custom/separator": {
+        "format": " ",
+        "tooltip": false
+    },
     "wireplumber": {
-        "format": "",
+        "format": "{icon}",
         "format-muted": "",
         "format-icons": [
             "",
             "",
             ""
         ],
-        "on-click": "~/.config/waybar/popups/audio.sh"
+        "on-click": "~/.config/waybar/popups/audio.sh",
+        "tooltip-format": "Volume   {volume}%\nOutput   {node_name}"
+    },
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲",
+        "tooltip-format": "{controller_alias}\n{num_connections} device(s) connected",
+        "on-click": "~/.config/waybar/popups/bluetooth.sh"
     },
     "network": {
-        "format-wifi": "󰖩",
+        "interval": 1,
+        "format-wifi": "",
         "format-ethernet": "󰈀",
         "format-disconnected": "󰖪",
-        "tooltip-format-wifi": "{essid}\n{signalStrength}%",
+        "states": {
+            "good": 80,
+            "warning": 50,
+            "critical": 25
+        },
+        "tooltip-format-wifi": "{essid}\n{ipaddr} | {signalStrength}%\n↑ {bandwidthUpBytes}  ↓ {bandwidthDownBytes}",
+        "tooltip-format-ethernet": "{ifname}\n{ipaddr}\n↑ {bandwidthUpOctets}  ↓ {bandwidthDownOctets}",
         "on-click": "~/.config/waybar/popups/network.sh"
     },
     "battery": {
         "format": "{icon}",
-        "format-charging": "󰂄",
+        "format-charging": "󰂅",
+        "format-plugged": "󰂅",
         "format-icons": [
             "󰁺",
             "󰁻",
             "󰁼",
-            "󰁽",
+            "󰁾",
             "󰁾",
             "󰁿",
             "󰂀",
@@ -46,9 +63,18 @@
             "󰂂",
             "󰁹"
         ],
+        "states": {
+            "warning": 35,
+            "critical": 20
+        },
+        "tooltip-format-charging": "Load           {capacity}%\nState          Charging\nTime left {time}",
+        "tooltip-format-discharging": "Load            {capacity}%\nState           Discharging\nBattery life    {time}",
+        "tooltip-format-full": "Load            100%\nState           Full",
         "on-click": "~/.config/waybar/popups/battery.sh"
     },
     "clock": {
+        "interval": 1,
+        "tooltip": false,
         "format": "{:%H:%M:%S}",
         "on-click": "swaync-client -t"
     },
