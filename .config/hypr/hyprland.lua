@@ -12,6 +12,15 @@ hl.monitor({
 -- Input
 -- =====================
 hl.config({
+	general = {
+		gaps_in = 5,
+		gaps_out = 10,
+		["col.active_border"] = "rgba(bd93f9ff)",
+		["col.inactive_border"] = "rgba(282a36ff)",
+	},
+	decoration = {
+		rounding = 8,
+	},
 	input = {
 		kb_layout = "us",
 		kb_variant = "intl",
