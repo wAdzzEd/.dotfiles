@@ -11,8 +11,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #282a3666;
-  bg-alt: #44475a66;
+  bg: #282a36aa;
+  bg-alt: #44475aaa;
   fg: #f8f8f2;
   fg-alt: #7f849c;
   purple: #bd93f9;
@@ -58,7 +58,7 @@ element {
 }
 
 element selected {
-        text-color: @fg;
+        text-color: @pink;
         border-radius: 8;
 }
 
