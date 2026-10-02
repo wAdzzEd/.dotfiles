@@ -1,3 +1,4 @@
 zen-browser-bin
 visual-studio-code-bin
 bluetui-bin
+bibata-cursor-theme-bin
