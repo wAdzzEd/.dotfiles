@@ -24,3 +24,15 @@ map("v", "<C-v>", '"+p', { desc = "Paste" })
 
 -- Select all
 map("n", "<C-a>", "ggVG", { desc = "Select all" })
+
+-- Undo / Redo
+map("n", "<C-z>", "u", { desc = "Undo" })
+map("i", "<C-z>", "<C-o>u", { desc = "Undo" })
+
+map("n", "<C-S-z>", "<C-r>", { desc = "Redo" })
+map("i", "<C-S-z>", "<C-o><C-r>", { desc = "Redo" })
+
+-- Search & replace
+map("n", "<C-f>", "/", { desc = "Rechercher dans le fichier" })
+map("i", "<C-f>", "<C-o>/", { desc = "Rechercher dans le fichier" })
+map("n", "<C-h>", ":%s/", { desc = "Rechercher et remplacer" })
